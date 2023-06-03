@@ -1,0 +1,12 @@
+.highlight {
+    display: inline-block;
+    z-index: -1;
+    height: 25px; 
+    transition: width 0.5s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    background-color: var(--color-primary-light);
+}

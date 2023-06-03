@@ -1,0 +1,38 @@
+.navigation {
+   position: absolute;
+   top: 0.625rem;
+   right: 6.25rem;
+
+   & &__list {
+      display: flex;
+      flex-direction: row;
+   }
+    
+   & &__item {
+      position: relative;
+      list-style: none;
+      font-size: var(--fs-links);
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-right: 3.25rem;
+      width: initial;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+         transform: scale(1.05);
+       }
+   }
+
+   & &__link {
+      color: var(--color-dark);
+      text-decoration: none;
+
+      &:hover  .navigation__highlight{
+         width: 100px; 
+      }
+   }
+
+   & &__hamburger {
+      display: none;
+   }
+}
