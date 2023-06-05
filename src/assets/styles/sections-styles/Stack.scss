@@ -1,0 +1,42 @@
+.stack {
+    margin-top:6.25rem;
+    padding: 0 6.25rem;
+    background-color: var(--color-primary-light);
+    position: relative;
+
+    & &__wave {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        
+        &--top {
+            bottom: 427px;
+        }
+        &--bottom {
+           rotate: 180deg;
+            top: 427px;
+        }
+    }
+
+    & &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); 
+        grid-gap: 1rem; 
+        list-style: none;
+        text-align: center;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        & img {
+            width: 5rem;
+            transition: 0.35s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+
+}
