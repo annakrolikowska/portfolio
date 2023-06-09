@@ -8,11 +8,16 @@
     color: var(--color-dark);
     box-shadow: -4px 4px 0px -2px var(--color-dark);
     transition: 0.2s;
+    text-decoration: none;
     cursor: pointer;
-    margin-top: 20px;
-}
+    
+    &:hover {
+        box-shadow: -5px 5px 0px -2px var(--color-light);
+        transform: translate(-2px, 2px);
+    }
 
-.button:hover {
-    box-shadow: -5px 5px 0px -2px var(--color-light);
-    transform: translate(-2px, 2px);
+    @media (max-width: 767px) {
+        padding: 1.125rem; 
+        width: 100%;
+    }
 }

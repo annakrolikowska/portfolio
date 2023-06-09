@@ -1,21 +1,30 @@
 import React from 'react';
-import '../../assets/styles/components-styles/UI/Button.css';
+import '../assets/styles/components-styles/Button.css';
 
 type ButtonProps = {
-    onClick: () => void;
-    disabled?: boolean;
     className?: string;
+    href?: string;
+    onClick?: () => void;
+    disabled?: boolean;
     children: React.ReactNode;
 };
 
-const Button: React.FC<ButtonProps> = ({ onClick, disabled, className, children }) => {
+const Button: React.FC<ButtonProps> = ({ className, href, onClick, disabled, children }) => {
     const buttonClass = className ? `button ${className}` : 'button';
-  
+
+    if (href) {
+        return (
+            <a href={href} className={buttonClass}>
+                {children}
+            </a>
+        );
+    }
+
     return (
-      <button className={buttonClass} onClick={onClick} disabled={disabled}>
-        {children}
-      </button>
+        <button className={buttonClass} onClick={onClick} disabled={disabled}>
+            {children}
+        </button>
     );
 };
-  
+
 export default Button;
