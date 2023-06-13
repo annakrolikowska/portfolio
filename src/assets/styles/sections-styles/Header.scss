@@ -29,12 +29,20 @@
         align-items: center;
         justify-content: center;
         align-items: center;
-        background: url("../../images/img-background.png") no-repeat center / contain;
         width: 28.75rem;
         height: 29.37rem;
 
         &--mobile {
             display: none;
+        }
+    }
+
+    & &__img-background {
+        position: absolute;
+        z-index: -1;
+
+        & path {
+            fill: var(--color-primary);
         }
     }
 
@@ -59,7 +67,6 @@
         }
        
         & &__img-container {
-            background: none;
             width: auto;
             height: auto;
             max-width: 19rem;

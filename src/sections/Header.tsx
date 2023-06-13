@@ -3,6 +3,7 @@ import '../assets/styles/sections-styles/Header.css';
 import Button from '../components/Button';
 import avatar from '../assets/images/avatar.png'
 import Navigation from '../components/Navigation';
+import { ReactComponent as BackgroundSVG } from '../assets/images/img-background.svg';
 
 const Header: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Header: React.FC = () => {
             <Button href="#projects">Checkout my projects</Button>
         </div>
         <div className="header__img-container header__img-container--desktop">
+            <BackgroundSVG className="header__img-background"  />
             <img className="header__img" src={avatar} alt="avatar" />
         </div>
     </header>
