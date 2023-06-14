@@ -76,6 +76,10 @@
             margin: 0;
             width: 100%;
         }
+        
+        & &__img-background { 
+            display: none;
+        }
     }
       
     @media (max-width: 1025px) {
