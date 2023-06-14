@@ -1,7 +1,15 @@
 .about {
-    padding: 6.25rem;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
 
     p {
         font-size: var(--fs-body);
+    }
+
+    @media (max-width: 767px) {
+        padding: var(--padding-mobile);
+        & p {
+            font-size: var(--fs-body-mobile);
+        }
     }
 }
