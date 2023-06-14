@@ -6,7 +6,7 @@ import styledComponentsIcon from '../assets/images/styled-components.png';
 import reactIcon from '../assets/images/react.png';
 import reduxIcon from '../assets/images/redux.png';
 import webpackIcon from '../assets/images/webpack.png';
-import jestIcon from '../assets/images/jest.png';
+import TypescriptIcon from '../assets/images/typescript.png';
 import figmaIcon from '../assets/images/figma.png';
 
 export type Technology = {
@@ -48,8 +48,8 @@ export type Technology = {
         label: 'Webpack',
     },
     {
-        icon: jestIcon,
-        label: 'Jest',
+        icon: TypescriptIcon,
+        label: 'Typescript',
     },
     {
         icon: figmaIcon,
