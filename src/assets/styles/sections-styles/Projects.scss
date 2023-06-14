@@ -1,0 +1,22 @@
+.projects {
+    padding-top: var(--padding-desktop-bg);
+    padding-bottom: var(--padding-desktop-bg);
+
+    & &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 1rem; 
+        padding-bottom: 2rem;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: var(--padding-mobile);
+    }
+
+    @media (max-width: 1025px) {
+        & &__container {
+            grid-template-columns: 1fr; 
+            padding-bottom: 0;
+        }
+    }
+}
