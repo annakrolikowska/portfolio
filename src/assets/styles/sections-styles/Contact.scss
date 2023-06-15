@@ -1,0 +1,39 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary-light);
+    position: relative;
+    padding-top: 0;
+    align-items: end;
+
+    & &__container {
+      padding-right: 5%;
+    }
+
+    & p {
+        font-size: 2.2rem;
+        margin: 0;
+    }
+
+    & &__wave {
+        position: absolute;
+        transform: scaleX(-1);
+        z-index: -1;
+        bottom: 166px;
+        left: 0;
+
+        & path {
+            fill: var(--color-primary-light);
+        }
+    }
+
+    @media (max-width: 767px) {
+         p {
+            font-size: 1.5rem;
+        }
+
+        & &__wave {
+            bottom: 106px;
+        }
+    }
+}
