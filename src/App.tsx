@@ -4,10 +4,12 @@ import Stack from './sections/Stack';
 import Projects from './sections/Projects';
 import Footer from './sections/Footer';
 import Contact from './sections/Contact';
+import ThemeButtons from './components/ThemeButtons';
 
 function App() {
   return (
     <div className="App">
+      <ThemeButtons/>
        <Header/>
        <About/>
        <Stack/>
