@@ -10,6 +10,7 @@ body {
   font-size: 16px;
   font-family: var(--font-primary);
   color: var(--color-dark);
+  background-color: var(--color-light);
 }
 
 h2 {
@@ -38,6 +39,20 @@ h1 {
 
   .container {
     padding: 0 var(--padding-desktop-bg);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
