@@ -1,0 +1,45 @@
+.footer {
+  display: flex;
+  background-color: var(--color-primary-light);
+  justify-content: center;
+  padding: 3.5rem 0 2rem;
+
+  & &__icons-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  & &__icon {
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    padding: 0.5rem;
+    justify-content: center;
+    transition: 0.3s;
+    opacity: 0.95;
+
+      :hover {
+        opacity: 0.95;
+        animation: bounce 1s infinite;    
+      }
+  }
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    padding: 3rem 1rem 1rem;
+
+    & &__copyright {
+        text-align: center;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
