@@ -7,7 +7,7 @@
     }
 
     @media (max-width: 767px) {
-        padding: var(--padding-mobile);
+        padding: 0 var(--padding-mobile);
         & p {
             font-size: var(--fs-body-mobile);
         }

@@ -48,13 +48,23 @@
         }
     
         & &__wave {
-        
             &--top {
                 top: -33px;
             }
             &--bottom { 
                 top: auto;
                 bottom: -32px;
+            }
+        }
+    }
+
+    @media (max-width: 360px) {
+        & &__wave {
+            &--top {
+                top: -28px;
+            }
+            &--bottom { 
+                bottom: -28px;
             }
         }
     }

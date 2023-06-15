@@ -4,13 +4,14 @@
 
     & &__container {
         display: grid;
+        place-items: center;
         grid-template-columns: repeat(2, 1fr); 
         grid-gap: 1rem; 
         padding-bottom: 2rem;
     }
 
     @media (max-width: 767px) {
-        padding-top: var(--padding-mobile);
+        padding: var(--padding-mobile) 1rem;
     }
 
     @media (max-width: 1025px) {
