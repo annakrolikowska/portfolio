@@ -45,11 +45,12 @@
         }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 550px) {
 
         & &__stack {
             flex-direction: column;
             align-items: center;
+            gap: 0.5rem;
         }
 
         & &__links-container {
