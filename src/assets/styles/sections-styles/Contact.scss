@@ -5,6 +5,7 @@
     position: relative;
     padding-top: 0;
     align-items: end;
+    z-index: -1;
 
     & &__container {
       padding-right: 5%;
