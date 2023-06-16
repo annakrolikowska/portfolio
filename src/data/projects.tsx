@@ -14,8 +14,8 @@ export const projects = [
       imageSrc: "https://i.ibb.co/CWnyLwG/portfoliomokap.png",
       stack: ["TypeScript", "React", "SCSS"],
       description: "This is my portfolio website that I created using TypeScript, React, and SCSS. The website has a simple design that I previously prepared in Figma. It features a pastel color scheme, and the color theme of the website can be changed according to preferences, with options including pink, blue, green, and orange. The website showcases my skills and highlights a few selected projects.",
-      linkLive: "page",
-      linkRepo: "repo",
+      linkLive: "annakrolikowska.github.io/portfolio/",
+      linkRepo: "https://github.com/annakrolikowska/portfolio",
     },
     {
         id: 3,
