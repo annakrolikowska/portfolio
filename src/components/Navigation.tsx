@@ -40,6 +40,7 @@ const Navigation: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsOpen(false);
+      setIsMobileMenuVisible(false);
     }
   };
 
