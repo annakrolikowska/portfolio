@@ -12,10 +12,10 @@ const Footer: React.FC = () => {
           Designed and Coded by © 2023 Anna Królikowska. All rights reserved.
         </p>
         <div className="footer__icons-container">
-          <a className="footer__icon" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <a className="footer__icon" href="https://www.linkedin.com/in/krolikowska-ann/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon  icon={faLinkedin} />
           </a> 
-          <a className="footer__icon" href="https://www.linkedin.com/in/krolikowska-ann/" target="_blank" rel="noopener noreferrer">
+          <a className="footer__icon" href="https://github.com/annakrolikowska" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
