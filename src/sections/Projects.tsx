@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
             <ProjectItem key={project.id} project={project} />
             ))}
         </div>
-        <Button href="https://github.com/annakrolikowska">Checkout my GitHub</Button>
+        <Button href="https://github.com/annakrolikowska">Check out my GitHub</Button>
       </section>
     );
   };

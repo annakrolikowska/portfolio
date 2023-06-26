@@ -16,7 +16,7 @@ const Header: React.FC = () => {
             <img className="header__img" src={avatar} alt="avatar" />
         </div>
             <p>I am actively seeking new opportunities in the frontend development field.</p>
-            <Button href="#projects">Checkout my projects</Button>
+            <Button href="#projects">Check out my projects</Button>
         </div>
         <div className="header__img-container header__img-container--desktop ">
             <BackgroundSVG className="header__img-background"  />
