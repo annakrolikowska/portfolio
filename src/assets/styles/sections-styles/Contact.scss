@@ -8,7 +8,8 @@
     z-index: -1;
 
     & &__container {
-      padding-right: 5%;
+      padding-right: var(--padding-desktop-bg);
+      text-align: end;
     }
 
     & p {
@@ -28,13 +29,27 @@
         }
     }
 
+    @media (min-width: 1800px) {
+        padding-right: 10%;
+    }
+
+    @media (min-width: 2300px) {
+        padding-right: 20%;
+    }
+
     @media (max-width: 767px) {
          p {
             font-size: 1.5rem;
         }
 
+        & &__container {
+            padding-right: var(--padding-mobile);
+            margin-right: 0;
+            text-align: end;
+          }
+
         & &__wave {
-            bottom: 100px;
+            bottom: 6.25rem;
         }
     }
 
@@ -48,7 +63,7 @@
         }
 
         & &__wave {
-            bottom: 90px;
+            bottom: 5.625rem;
         }
     }
 }
