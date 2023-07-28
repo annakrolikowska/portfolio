@@ -19,6 +19,10 @@
         border: var(--border-dark);
         border-radius: 25%;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &--blue {
             background-color: #A7C7E7;
         }
