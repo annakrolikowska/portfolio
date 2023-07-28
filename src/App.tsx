@@ -5,6 +5,7 @@ import Projects from './sections/Projects';
 import Footer from './sections/Footer';
 import Contact from './sections/Contact';
 import ThemeButtons from './components/ThemeButtons';
+import Cursor from './components/Cursor';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
        <Stack/>
        <Projects/>
        <Contact/>
-       <Footer/>
+       <Footer/>  
+       <Cursor/>
     </div>
   );
 }

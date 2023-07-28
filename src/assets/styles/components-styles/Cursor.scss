@@ -1,0 +1,11 @@
+#cursor {
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-primary-dark);
+    opacity: 80%;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid var(--color-dark);
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
