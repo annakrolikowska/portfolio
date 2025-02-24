@@ -1,5 +1,5 @@
-import React from 'react';
-import '../assets/styles/components-styles/Highlight.css';
+import React from "react";
+import "../assets/styles/components-styles/Highlight.scss";
 
 interface HighlightProps {
   className?: string;

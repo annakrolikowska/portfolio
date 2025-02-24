@@ -1,26 +1,26 @@
 .button {
-    background-color: var(--color-primary);
-    border-radius: 20px;
-    border: var(--border-dark);
-    font-size: var(--fs-button);
-    padding: 1.125rem 2.75rem; 
-    font-weight: 600;
-    color: var(--color-dark);
-    box-shadow: -4px 4px 0px -2px var(--color-dark);
-    transition: 0.2s;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    
-    &:hover {
-        box-shadow: -5px 5px 0px -2px var(--color-light);
-        transform: translate(-2px, 2px);
-    }
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  border: var(--border-dark);
+  font-size: var(--fs-button);
+  padding: 1.125rem 2.75rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  box-shadow: -4px 4px 0px -2px var(--color-dark);
+  transition: 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
 
-    @media (max-width: 767px) {
-        padding: 1.125rem; 
-        display: block;
-        text-align: center;
-        font-size: var(--fs-button-mobile);
-    }
+  &:hover {
+    box-shadow: -5px 5px 0px -2px var(--color-light);
+    transform: translate(-2px, 2px);
+  }
+
+  @media (max-width: 767px) {
+    padding: 1.125rem;
+    display: block;
+    text-align: center;
+    font-size: var(--fs-button-mobile);
+  }
 }

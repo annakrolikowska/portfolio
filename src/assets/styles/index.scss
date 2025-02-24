@@ -1,5 +1,5 @@
-@import "./global-styles/normalize.css"; 
-@import "./global-styles/root.css";
+@import "./global-styles/normalize.scss";
+@import "./global-styles/root.scss";
 
 html {
   scroll-behavior: smooth;
@@ -26,7 +26,7 @@ h1 {
 }
 
 .container {
-  max-width: 1450px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 var(--padding-desktop);
   transition: 0.3s;
@@ -34,7 +34,7 @@ h1 {
 
 @media (min-width: 1500px) {
   h1 {
-   font-size: var(--fs-h1-bg);
+    font-size: var(--fs-h1-bg);
   }
 
   .container {
@@ -58,19 +58,19 @@ h1 {
 
 @media (max-width: 1315px) {
   h1 {
-   font-size: var(--fs-h1-sm);
+    font-size: var(--fs-h1-sm);
   }
 }
 
-@media (max-width: 1025px) {
-  .container {
-    max-width: 700px;
-  }
-}
+// @media (max-width: 1025px) {
+//   .container {
+//     max-width: 700px;
+//   }
+// }
 
 @media (max-width: 767px) {
   h1 {
-      font-size: var(--fs-h1-mobile);
+    font-size: var(--fs-h1-mobile);
   }
 
   h2 {
@@ -78,6 +78,6 @@ h1 {
   }
 
   .container {
-    padding: var(--padding-mobile)
+    padding: var(--padding-mobile);
   }
 }
