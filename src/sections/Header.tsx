@@ -2,13 +2,13 @@ import React from "react";
 import "../assets/styles/sections-styles/Header.scss";
 import Button from "../components/Button";
 import avatar from "../assets/images/avatar.png";
-import Navigation from "../components/Navigation";
+
 import { ReactComponent as BackgroundSVG } from "../assets/images/img-background.svg";
 
 const Header: React.FC = () => {
   return (
     <header className="header container fade-in" id="home">
-      <Navigation />
+      {/*  */}
       <div className="header__text-container fade-in">
         <h1>
           Hello,
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
         </div>
         <p>
           I am actively seeking new opportunities in the frontend development
-          field.
+          field, focusing on Angular or React
         </p>
         <Button href="#projects">Check out my projects</Button>
       </div>

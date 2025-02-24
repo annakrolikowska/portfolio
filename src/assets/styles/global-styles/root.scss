@@ -2,7 +2,8 @@
   --color-primary: #e9bcd9;
   --color-primary-light: #fbe5f3;
   --color-primary-dark: #d793be;
-  --color-light: #fcfcfc;
+  --color-bg: #fcfcfc;
+  --color-txt: #1e1919;
   --color-dark: #1e1919;
   --color-light-dark: #342e2e;
   --color-white: #ffffff;
@@ -21,7 +22,7 @@
   --fs-h2-mobile: 1.7rem;
   --fs-body-mobile: 1.3rem;
   --fs-button-mobile: 1.2rem;
-  --border-dark: 1px solid var(--color-dark);
+  --border-dark: 1px solid var(--color-txt);
   --padding-desktop-bg: 6.25rem;
   --padding-desktop: 4.25rem;
   --padding-mobile: 2.25rem;
@@ -43,4 +44,9 @@
   --color-primary: #ffd88c;
   --color-primary-light: #ffe8ba;
   --color-primary-dark: #e0ba70;
+}
+
+[data-theme="dark"] {
+  --color-bg: #1e1919;
+  --color-txt: #fcfcfc;
 }

@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../assets/styles/components-styles/Navigation.scss";
 import Highlight from "./Highlight";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import DarkLightToggle from "./DarkLightToogle";
 
 interface Link {
   title: string;
@@ -18,8 +19,8 @@ const Navigation: React.FC = () => {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const navRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,59 +35,61 @@ const Navigation: React.FC = () => {
     };
   }, []);
 
-  const handleClick = (
-    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    target: string,
-  ) => {
-    event.preventDefault();
-    const element = document.getElementById(target);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-      setIsMobileMenuVisible(false);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
     }
-  };
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen);
-    setIsMobileMenuVisible(!isMobileMenuVisible);
   };
 
   return (
     <nav
+      ref={navRef}
       className={`navigation ${isMobile ? "navigation--mobile" : ""} ${
         isOpen ? "navigation--open" : ""
       }`}
     >
-      {isMobile ? (
+      {isMobile && (
         <div
           className={`navigation__hamburger ${
             isOpen ? "navigation__hamburger--open" : ""
           }`}
           onClick={handleHamburgerClick}
         >
-          {isMobileMenuVisible ? (
-            <FontAwesomeIcon icon={faXmark} />
-          ) : (
-            <FontAwesomeIcon icon={faBars} />
-          )}
+          <FontAwesomeIcon icon={isOpen ? faXmark : faBars} />
         </div>
-      ) : null}
+      )}
       <ul
         className={`navigation__list ${isOpen ? "navigation__list--open" : ""}`}
       >
-        {links.map((link, index) => (
-          <li key={index} className="navigation__item">
+        {links.map((link) => (
+          <li key={link.target} className="navigation__item">
             <a
               href={`#${link.target}`}
               className="navigation__link"
-              onClick={(e) => handleClick(e, link.target)}
+              onClick={() => setIsOpen(false)}
             >
               {link.title}
               <Highlight className="navigation__highlight" />
             </a>
           </li>
         ))}
+        <DarkLightToggle />
       </ul>
     </nav>
   );
