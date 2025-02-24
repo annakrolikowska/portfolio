@@ -77,9 +77,13 @@ const Navigation: React.FC = () => {
       <ul
         className={`navigation__list ${isOpen ? "navigation__list--open" : ""}`}
       >
-        {links.map((link, index) => (
-          <li key={index} className="navigation__item">
-            <a href={`#${link.target}`} className="navigation__link">
+        {links.map((link) => (
+          <li key={link.target} className="navigation__item">
+            <a
+              href={`#${link.target}`}
+              className="navigation__link"
+              onClick={() => setIsOpen(false)}
+            >
               {link.title}
               <Highlight className="navigation__highlight" />
             </a>
