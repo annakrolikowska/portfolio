@@ -1,6 +1,14 @@
 .projects {
   padding: var(--padding-desktop-bg) 2rem var(--padding-desktop-bg) 2rem;
 
+  & h2 {
+    margin-left: 2.625rem;
+  }
+
+  & .swiper-pagination-bullet {
+    background-color: var(--color-txt);
+  }
+
   & .swiper-pagination-bullet-active {
     background-color: var(--color-primary-dark);
   }

@@ -10,7 +10,7 @@
   margin-bottom: 2rem;
   border: var(--border-dark);
   border-radius: 20px;
-  box-shadow: 6px 6px 0 -1px var(--color-primary), 6px 6px 0 var(--color-dark);
+  box-shadow: 6px 6px 0 -1px var(--color-primary), 6px 6px 0 var(--color-txt);
 
   & img {
     width: 100%;
@@ -24,7 +24,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.25rem 1rem;
     padding: 0;
   }
 

@@ -6,14 +6,14 @@
   padding: 1.125rem 2.75rem;
   font-weight: 600;
   color: var(--color-dark);
-  box-shadow: -4px 4px 0px -2px var(--color-dark);
+  box-shadow: -4px 4px 0px -2px var(--color-txt);
   transition: 0.2s;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
 
   &:hover {
-    box-shadow: -5px 5px 0px -2px var(--color-light);
+    box-shadow: -5px 5px 0px -2px var(--color-bg);
     transform: translate(-2px, 2px);
   }
 

@@ -1,7 +1,12 @@
 .navigation {
-  position: absolute;
+  position: fixed;
   top: 0.625rem;
   right: 6.25rem;
+  padding-right: 40px;
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--color-bg) 80%, transparent);
+  border-radius: 20px;
+  z-index: 20;
 
   & &__list {
     display: flex;
@@ -10,6 +15,7 @@
 
   & &__item {
     position: relative;
+    align-content: center;
     list-style: none;
     font-size: var(--fs-links);
     text-transform: uppercase;
@@ -24,7 +30,7 @@
   }
 
   & &__link {
-    color: var(--color-dark);
+    color: var(--color-txt);
     text-decoration: none;
 
     &:hover .navigation__highlight {
@@ -36,17 +42,25 @@
     display: none;
   }
 
+  @media (max-width: 954px) {
+    & &__item {
+      font-size: 0.875rem;
+      padding-right: 2.25rem;
+    }
+  }
+
   @media (max-width: 767px) {
     &--open {
-      background-color: var(--color-primary);
-      opacity: 95%;
       top: 0;
       left: 0;
       width: 100%;
       height: 80vh;
       animation: slideInLeft 0.5s;
       position: fixed;
-      z-index: 1;
+      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--color-primary) 90%, transparent);
+      border-radius: 0;
+      z-index: 2;
     }
 
     & &__list {
@@ -62,6 +76,7 @@
 
     & &__item {
       font-size: 2rem;
+      padding: 0;
       &:hover {
         transform: none;
       }
@@ -71,11 +86,15 @@
       display: flex;
       font-size: 2rem;
       position: fixed;
-      right: 0.75rem;
-      z-index: 1;
+      left: 6.125rem;
+      right: unset;
+      backdrop-filter: blur(10px);
+      z-index: 2;
       &--open {
         padding-top: 1rem;
         font-size: 2.2rem;
+        right: 3.5rem;
+        left: unset;
       }
     }
 
