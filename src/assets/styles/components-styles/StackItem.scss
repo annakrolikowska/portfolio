@@ -1,16 +1,16 @@
 .stack-item {
-    padding: 4px 10px;
-    background-color: var(--color-primary-light);
-    border: var(--border-dark);
-    font-size: 0.75rem;
-    border-radius: 5px;
-    text-transform: uppercase;
-    transition: 0.3s;
+  padding: 4px 10px;
+  background-color: var(--color-primary-light);
+  border: var(--border-dark);
+  font-size: 0.75rem;
+  align-items: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: 0.3s;
 
-    @media (max-width: 550px) {
-       width: 100%;
-       display: flex;
-       justify-content: center;
-    }
+  @media (max-width: 550px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
-

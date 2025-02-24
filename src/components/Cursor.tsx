@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import '../assets/styles/components-styles/Cursor.css';
+import React, { useEffect, useState } from "react";
+import "../assets/styles/components-styles/Cursor.scss";
 
 const Cursor: React.FC = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -22,6 +22,6 @@ const Cursor: React.FC = () => {
       style={{ left: cursorPosition.x, top: cursorPosition.y }}
     ></div>
   );
-}
+};
 
 export default Cursor;

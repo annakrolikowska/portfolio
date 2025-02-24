@@ -1,23 +1,16 @@
 .projects {
-    padding-top: var(--padding-desktop-bg);
-    padding-bottom: var(--padding-desktop-bg);
+  padding: var(--padding-desktop-bg) 2rem var(--padding-desktop-bg) 2rem;
 
-    & &__container {
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(2, 1fr); 
-        grid-gap: 1rem; 
-        padding-bottom: 2rem;
-    }
+  & .swiper-pagination-bullet-active {
+    background-color: var(--color-primary-dark);
+  }
 
-    @media (max-width: 767px) {
-        padding: var(--padding-mobile) 1rem;
-    }
+  & .swiper-button-prev,
+  & .swiper-button-next {
+    visibility: hidden;
+  }
 
-    @media (max-width: 1025px) {
-        & &__container {
-            grid-template-columns: 1fr; 
-            padding-bottom: 0;
-        }
-    }
+  @media (max-width: 767px) {
+    padding: var(--padding-mobile) 1rem;
+  }
 }

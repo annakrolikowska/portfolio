@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import '../assets/styles/components-styles/Navigation.css';
-import Highlight from './Highlight';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faXmark  } from '@fortawesome/free-solid-svg-icons'
+import React, { useState, useEffect } from "react";
+import "../assets/styles/components-styles/Navigation.scss";
+import Highlight from "./Highlight";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 interface Link {
   title: string;
@@ -11,10 +11,10 @@ interface Link {
 
 const Navigation: React.FC = () => {
   const links: Link[] = [
-    { title: 'About me', target: 'about' },
-    { title: 'My Stack', target: 'stack' },
-    { title: 'Projects', target: 'projects' },
-    { title: 'Contact', target: 'contact' },
+    { title: "About me", target: "about" },
+    { title: "My Stack", target: "stack" },
+    { title: "Projects", target: "projects" },
+    { title: "Contact", target: "contact" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -26,19 +26,22 @@ const Navigation: React.FC = () => {
       setIsMobile(window.innerWidth <= 767);
     };
 
-    handleResize(); 
-    window.addEventListener('resize', handleResize);
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, target: string) => {
+  const handleClick = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    target: string,
+  ) => {
     event.preventDefault();
     const element = document.getElementById(target);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
       setIsMobileMenuVisible(false);
     }
@@ -50,9 +53,18 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className={`navigation ${isMobile ? 'navigation--mobile' : ''} ${isOpen ? 'navigation--open' : ''}`}>
+    <nav
+      className={`navigation ${isMobile ? "navigation--mobile" : ""} ${
+        isOpen ? "navigation--open" : ""
+      }`}
+    >
       {isMobile ? (
-        <div className={`navigation__hamburger ${isOpen ? 'navigation__hamburger--open' : ''}`} onClick={handleHamburgerClick}>
+        <div
+          className={`navigation__hamburger ${
+            isOpen ? "navigation__hamburger--open" : ""
+          }`}
+          onClick={handleHamburgerClick}
+        >
           {isMobileMenuVisible ? (
             <FontAwesomeIcon icon={faXmark} />
           ) : (
@@ -60,10 +72,16 @@ const Navigation: React.FC = () => {
           )}
         </div>
       ) : null}
-      <ul className={`navigation__list ${isOpen ? 'navigation__list--open' : ''}`}>
+      <ul
+        className={`navigation__list ${isOpen ? "navigation__list--open" : ""}`}
+      >
         {links.map((link, index) => (
           <li key={index} className="navigation__item">
-            <a href={`#${link.target}`} className="navigation__link" onClick={(e) => handleClick(e, link.target)}>
+            <a
+              href={`#${link.target}`}
+              className="navigation__link"
+              onClick={(e) => handleClick(e, link.target)}
+            >
               {link.title}
               <Highlight className="navigation__highlight" />
             </a>

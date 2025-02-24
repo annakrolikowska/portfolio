@@ -1,17 +1,17 @@
 .about {
-    padding-top: 6.25rem;
-    padding-bottom: 6.25rem;
-    position: relative;
-    z-index: -1;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+  position: relative;
+  z-index: -1;
 
-    p {
-        font-size: var(--fs-body);
-    }
+  p {
+    font-size: var(--fs-body);
+  }
 
-    @media (max-width: 767px) {
-        padding: 0 var(--padding-mobile);
-        & p {
-            font-size: var(--fs-body-mobile);
-        }
+  @media (max-width: 767px) {
+    padding: 0 var(--padding-mobile);
+    & p {
+      font-size: var(--fs-body-mobile);
     }
+  }
 }

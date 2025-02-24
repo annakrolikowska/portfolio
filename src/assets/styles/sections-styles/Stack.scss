@@ -1,72 +1,77 @@
 .stack {
-    margin-top:6.25rem;
-    background-color: var(--color-primary-light);
-    position: relative;
+  margin-top: 6.25rem;
+  background-color: var(--color-primary-light);
+  position: relative;
+  z-index: -1;
+
+  & &__wave {
+    position: absolute;
     z-index: -1;
+    left: 0;
+
+    & path {
+      fill: var(--color-primary-light);
+    }
+
+    &--top {
+      bottom: 26.625rem;
+    }
+    &--bottom {
+      rotate: 180deg;
+      top: 26.563rem;
+    }
+  }
+
+  & &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    list-style: none;
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    & img {
+      width: 5rem;
+      transition: 0.35s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    & &__list {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+    }
 
     & &__wave {
-        position: absolute;
-        z-index: -1;
-        left: 0;
-
-        & path {
-            fill: var(--color-primary-light);
-        }
-        
-        &--top {
-            bottom: 426px;
-        }
-        &--bottom {
-           rotate: 180deg;
-            top: 425px;
-        }
+      &--top {
+        top: -2.063rem;
+      }
+      &--bottom {
+        top: auto;
+        bottom: -2rem;
+      }
     }
+  }
 
+  @media (max-width: 600px) {
     & &__list {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr); 
-        grid-gap: 1rem; 
-        list-style: none;
-        text-align: center;
-        padding: 1rem;
-        text-transform: uppercase;
-        font-weight: 700;
-
-        & img {
-            width: 5rem;
-            transition: 0.35s;
-
-            &:hover {
-                transform: scale(1.2);
-            }
-        }
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
     }
 
-    @media (max-width: 767px) {
-        & &__list {
-            grid-template-columns: repeat(2, 1fr); 
-            grid-gap: 1rem; 
-        }
-    
-        & &__wave {
-            &--top {
-                top: -33px;
-            }
-            &--bottom { 
-                top: auto;
-                bottom: -32px;
-            }
-        }
+    & &__wave {
+      &--top {
+        top: -1.75rem;
+      }
+      &--bottom {
+        bottom: -1.75rem;
+      }
     }
-
-    @media (max-width: 360px) {
-        & &__wave {
-            &--top {
-                top: -28px;
-            }
-            &--bottom { 
-                bottom: -28px;
-            }
-        }
-    }
+  }
 }
