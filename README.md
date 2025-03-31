@@ -1,8 +1,8 @@
 # 🖥️ Portfolio
 
-<img src='https://i.ibb.co/RCs8rvH/mockup-portfolio.png'>
+<img src='https://i.ibb.co/ksHcJXTb/Group-11.png'>
 
-This is my frontend developer portfolio, created using **React, TypeScript**, and **SCSS**. It showcases sample projects with live links and GitHub repositories. The design was prepared in Figma, offering a simple and clean layout. Users can customize the color theme with pastel options (pink, blue, green, orange). Projects feature various SCSS animations and highlights using react-rough-notation.
+This is my frontend developer portfolio, created using **React, TypeScript**, and **SCSS**. It showcases sample projects with live links and GitHub repositories. The design was prepared in Figma, offering a simple and clean layout. Users can customize the color theme with pastel options (pink, blue, green, orange) and switch between light and dark modes for a more personalized experience.  Projects feature various SCSS animations and highlights using react-rough-notation.
 
 [**Here is the link to the live project**](https://annakrolikowska.github.io/portfolio/)
 
@@ -10,7 +10,7 @@ This is my frontend developer portfolio, created using **React, TypeScript**, an
 
 - This project was initially planned and designed in **Figma**.
 - Features a collection of sample projects with live links and corresponding GitHub repositories
-- **Customizable color theme** with a range of pastel colors (pink, blue, green, orange) for a visually pleasing and personalized experience
+- **Customizable color theme** with a range of pastel colors (pink, blue, green, orange)  and a **dark/light mode toggle** 
 - Various **animations** incorporated using SCSS to add interactivity and visual appeal
 - Utilizes the **react-rough-notation library** to highlight key elements and create visual emphasis, enhancing the user experience
 
