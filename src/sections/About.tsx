@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
       () => {
         setShowAnnotation((prevShow) => !prevShow);
       },
-      showAnnotation ? 10500 : 3000,
+      showAnnotation ? 10500 : 3000
     );
 
     return () => clearInterval(interval);

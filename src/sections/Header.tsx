@@ -1,14 +1,13 @@
 import React from "react";
 import "../assets/styles/sections-styles/Header.scss";
 import Button from "../components/Button";
-import avatar from "../assets/images/avatar.png";
+import avatar from "../assets/images/avatar.webp";
 
 import { ReactComponent as BackgroundSVG } from "../assets/images/img-background.svg";
 
 const Header: React.FC = () => {
   return (
     <header className="header container fade-in" id="home">
-      {/*  */}
       <div className="header__text-container fade-in">
         <h1>
           Hello,
